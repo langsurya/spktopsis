@@ -14,5 +14,6 @@ include_once "../admin/head.php";
 			</div>
 		</nav>
 	</div>
+	
 
 <?php include_once 'footer.php'; ?>

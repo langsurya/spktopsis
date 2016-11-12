@@ -7,14 +7,14 @@ include "../config/fungsi.php";
 include "../config/library.php";
 include '../inc/librari.php';
 $tanggal = tgl_indo(date("Y m d"));
-$jam	 = date("H:i:s");
+$jam     = date("H:i:s");
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Pemilihan Guru Berprestasi | MA NURFA Cadas</title>
-    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/logo.jpg" type="image/x-icon">
+    <link rel="icon" href="../assets/images/logo.jpg" type="image/x-icon">
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport' />
     
     <!--[if lt IE 9]>
@@ -62,7 +62,7 @@ $jam	 = date("H:i:s");
     <link href='../assets/stylesheets/light-theme.css' id='color-settings-body-color' media='all' rel='stylesheet' type='text/css' />
     <!-- / demo -->
     <link href='../assets/stylesheets/demo.css' media='all' rel='stylesheet' type='text/css' />
-	
+    
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
