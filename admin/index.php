@@ -2,47 +2,9 @@
 include "head.php";
 ?>
 <body class='contrast-red '>
-<header>
-  <div class='navbar'>
-    <div class='navbar-inner'>
-      <div class='container-fluid'>
-        <a class='brand' href='#'>                
-          <span class='hidden-phone'>SMK N 2 Kota Tangerang</span>
-        </a>
-        <a class='toggle-nav btn pull-left' href='#'>
-          <i class='icon-reorder'></i>
-        </a>
-        <ul class='nav pull-right'>                
-          <li class='dropdown dark user-menu'>
-            <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
-              <img alt='MA NURFA Cadas' height='23' src='../assets/images/logo.jpg' width='23' />
-                <span class='user-name hidden-phone'><b><?php echo $_SESSION['nama'];?></b></span>
-                <b class='caret'></b>
-            </a>
-            <ul class='dropdown-menu'>
-            <?php
-            $rows=mysqli_fetch_array(mysqli_query($konek,"SELECT * FROM tbl_user"));
-            ?>
-              <li>
-                <a href='user_profile.php?id=<?php echo $rows['id'];?>' >
-                  <i class='icon-user'></i>
-                  Profile
-                </a>
-              </li>
-              <li class='divider'></li>
-              <li>
-                <a href='logout.php'>
-                  <i class='icon-signout'></i>
-                  Keluar
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</header>
+
+<?php include_once 'navbar.php'; ?>
+
 <div id='wrapper'>
   <div id='main-nav-bg'></div>
   <nav class='' id='main-nav'>
@@ -56,27 +18,8 @@ include "head.php";
 <div class='container-fluid'>
 <div class='row-fluid' id='content-wrapper'>
 <div class='span12'>
-  <div class='row-fluid'>
-    <div class='span12'>
-      <div class='page-header'>
-        <h1 class='pull-left'>
-          <img src="../assets/images/logo.jpg" width="50" height="50">
-          <span>Pemilihan Guru Berprestasi</span>
-        </h1>
-        <div class='pull-right'>
-          <ul class='breadcrumb'>
-            <li>
-              <a href="#"><i class='icon-calendar'></i>
-              </a>
-            </li>
-            <li class='separator'>
-            </li>
-            <li><?php echo "$hari_ini, $tanggal | $jam WIB";?></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+  
+  <?php include_once 'header.php'; ?>
 
   <div class='row-fluid'>
     <div class='span12 box'>
