@@ -6,9 +6,9 @@
 <!-- <script src='../assets/javascripts/jquery/jquery-migrate.min.js' type='text/javascript'></script> -->
 <!-- / jquery ui -->
 <script src='../assets/javascripts/jquery_ui/jquery-ui.min.js' type='text/javascript'></script>
-<!-- / bootstrap --><!-- 
+<!-- / bootstrap -->
 <script src='../assets/javascripts/bootstrap/bootstrap.min.js' type='text/javascript'></script>
-<script src='../assets/javascripts/plugins/flot/excanvas.js' type='text/javascript'></script> -->
+<script src='../assets/javascripts/plugins/flot/excanvas.js' type='text/javascript'></script>
 <!-- / sparklines --><!-- 
 <script src='../assets/javascripts/plugins/sparklines/jquery.sparkline.min.js' type='text/javascript'></script> -->
 <!-- / flot charts --><!-- 
