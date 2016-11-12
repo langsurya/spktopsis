@@ -1,37 +1,43 @@
-<!DOCTYPE html>
-<html lang="">
-<head>
-	<meta charset="utf-8">
-	<title>Pemilihan Guru Berprestasi | Smkn 2 Kota Tangerang</title>
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="robots" content="" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
-	<link rel="stylesheet" href="assets/stylesheets/style.css" media="all" />
-	<link href="assets/stylesheets/bootstrap/bootstrap-responsive.css" media="all" rel="stylesheet" type="text/css" />
-	<link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
-	<!--[if IE]><link rel="stylesheet" href="css/ie.css" media="all" /><![endif]-->
-</head>
-<body class="login">
-	<section>
-		<h1><strong>SMK N 2</strong> <br>Kota Tangerang</h1>
+<?php include_once 'head.php'; ?>
+ <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+    <link rel="icon" href="assets/images/logo.jpg" type="image/x-icon">
 
-		<?php
-		if (!empty($_GET['error'])) {
-			if ($_GET['error']==4) {
-				echo '<script>window.alert("Username dan Password tidak terdaftar");</script>';
-				echo '<font color=yellow><b>Username dan Password tidak terdaftar! Coba Lagi.</b></font>';
-			}
-		}
-		?>
+ </head>
 
-		<form method="post" action="check_in.php">
-			<input type="text" placeholder="Usename" name="username" required/>
-			<input type="password" placeholder="Password" name="password" required/>
-			<button class="blue" type="submit" name="submit">Login</button>
-		</form>
-		<p><a href="index.php">Silahkan Anda login terlebih dahulu.</a></p>
-	</section>
-</body>
+  <body>
+
+    <div class="container">
+
+    <?php
+    if (!empty($_GET['error'])) {
+      if ($_GET['error']==4) {
+        echo '<script>window.alert("Username dan Password tidak terdaftar");</script>';
+        echo '
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Username dan Password tidak terdaftar! Coba Lagi.
+        </div>';
+      }
+    }
+    ?>
+
+      <form action="check_in.php" method="POST" class="form-signin">
+        <h2 class="form-signin-heading"><strong>SMK N 2</strong><br>Kota Tangerang</h2>
+        <label class="sr-only">Email address</label>
+        <input type="text" class="form-control" name="username" placeholder="Username" required autofocus>
+        <label class="sr-only">Password</label>
+        <input type="password" name="password" class="form-control" placeholder="Password" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit"><span class="glyphicon glyphicon-log-in"></span> Sign in</button>
+        <p class="bawah"><a href="index.php">Silahkan login terlebih dahulu</a></p>
+      </form>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
