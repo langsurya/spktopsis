@@ -45,20 +45,56 @@ include_once 'head.php';
 												</table><br/>
 											</span>
 
-											<div class='box--content box-no-padding'>
+											<div class='box-content box-no-padding'>
 												<div class='responsive-table'>
 													<div class='scrollable-area'>
-														<div align='right'><?php if($id>0){?><a href="himpunan_tambah.php?id_kriteria=<?php print $id; ?>"></a><?php } ?></div>
+														<div align='right'><?php if($id>0){?><a href="himpunan_tambah.php?id_kriteria=<?php print $id; ?>"><button class='btn btn-success'>Tambah Himpunan</button></a><?php } ?></div>
 														<table class='table table-bordered table-hover table-striped' style='margin-bottom: 0;'>
 															<thead>
 																<tr>
-																	<th></th>
+																	<th><center>NO</center></th>
+																	<th><center>NAMA</center></th>
+																	<th><center>NILAI</center></th>
+																	<th><center>AKSI</center></th>
 																</tr>
 															</thead>
+															<?php 
+															if ($id) {
+																$q = "SELECT tbl_kriteria.id_kriteria,tbl_kriteria.nama_kriteria, tbl_himpunan.id_himpunan,tbl_himpunan.nama,tbl_himpunan.nilai
+																FROM tbl_kriteria JOIN tbl_himpunan ON tbl_kriteria.id_kriteria=tbl_himpunan.id_kriteria
+																WHERE tbl_kriteria.id_kriteria='$id'";
+																$result = mysqli_query($konek,$q);
+																$no=1;
+																while ($row=mysqli_fetch_array($result)) {
+																	?>
+																<tbody>
+																	<tr>
+																		<td><center><?php print $no; ?></center></td>
+																		<td><center><?php print $row['nama'] ?></center></td>
+																		<td><center><?php print $row['nilai'] ?></center></td>
+																		<td>
+																			<div class="text-right">
+																				<center>
+																					<a class="btn btn-success btn-mini" href="himpunan_edit.php?id_himpunan=<?php print $row['id_himpunan']; ?>">
+																						<i class="icon-edit"></i>
+																					</a>
+																					<a class="btn btn-danger btn-mini" href="himpunan_hapus.php?id_himpunan=<?php print $row['id_himpunan']; ?>">
+																						<i class="icon-trash"></i>
+																					</a>
+																				</center>
+																			</div>
+																		</td>
+																	</tr>
+																</tbody>
+															<?php
+															$no++;
+																}
+															}
+															?>
 															
 															<script type="text/javascript">
                                     function changeValue(id) {
-                                        window.location = "?id_riteria="+id;
+                                        window.location = "?id_kriteria="+id;
                                     };
                                 </script>
 														</table>
