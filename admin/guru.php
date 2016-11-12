@@ -58,7 +58,7 @@ include_once "../admin/head.php";
 																<td><center><?php echo $data['nama_guru']; ?></center></td>
 																<td><center><?php echo $jenkel = ($jenkel=='L') ? 'Laki-laki' : 'Perempuan' ; ?></center></td>
 																<td><center><?php echo $data['tmp_lahir']; ?></center></td>
-																<td><center><?php echo $data['tgl_lahir']; ?></center></td>
+																<td><center><?php echo date('d-m-Y',strtotime($data['tgl_lahir'])); ?></center></td>
 																<td><center><?php echo $data['jabatan']; ?></center></td>						
 																<td>
 																	<div class='text-right'>
