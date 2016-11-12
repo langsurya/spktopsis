@@ -4203,9 +4203,9 @@ div.jGrowl div.jGrowl-notification, div.jGrowl div.jGrowl-closer {
   top: 50%; }
 
 .contrast-red header .navbar .navbar-inner {
-  background-color: #0393d9; }
+  background-color: #2ed903; }
   .contrast-red header .navbar .navbar-inner .toggle-nav {
-    background-color: #0393d9; }
+    background-color: #2ed903; }
     .contrast-red header .navbar .navbar-inner .toggle-nav:hover {
       background-color: #0067ce; }
   .contrast-red header .navbar .navbar-inner .navbar-search button {
@@ -4248,7 +4248,7 @@ div.jGrowl div.jGrowl-notification, div.jGrowl div.jGrowl-closer {
     .contrast-red header .navbar .navbar-inner .medium:hover > a, .contrast-red header .navbar .navbar-inner .medium:active > a, .contrast-red header .navbar .navbar-inner .medium:focus > a {
       background-color: #cb110d; }
   .contrast-red header .navbar .navbar-inner .dark {
-    background: #0000FF; }
+    background: #2ed903; }
     .contrast-red header .navbar .navbar-inner .dark .label {
       color: #0000FF; }
     .contrast-red header .navbar .navbar-inner .dark:hover > a, .contrast-red header .navbar .navbar-inner .dark:active > a, .contrast-red header .navbar .navbar-inner .dark:focus > a {
