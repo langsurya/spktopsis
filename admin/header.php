@@ -3,7 +3,7 @@
 		<div class='page-header'>
 			<h1 class='pull-left'>
 				<img src="../assets/images/logo.jpg" width="50" height="50">
-				<span>Pemilihan Guru Berprestasi</span>
+				<span>Pemilihan Guru Berprestasi (TOPSIS)</span>
 			</h1>
 			<div class='pull-right'>
 				<ul class='breadcrumb'>
