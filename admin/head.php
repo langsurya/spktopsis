@@ -12,7 +12,7 @@ $jam     = date("H:i:s");
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pemilihan Guru Berprestasi | MA NURFA Cadas</title>
+    <title>Pemilihan Guru Berprestasi |</title>
     <link rel="shortcut icon" href="../assets/images/logo.jpg" type="image/x-icon">
     <link rel="icon" href="../assets/images/logo.jpg" type="image/x-icon">
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport' />
