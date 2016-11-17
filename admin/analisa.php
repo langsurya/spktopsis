@@ -25,7 +25,7 @@ if (!empty($_POST['btnSubmit'])) {
   while ($h=mysqli_fetch_array($q)) {
     $_SESSION['ANALISA_KRITERIA'][$h['id_kriteria']]=$_POST['bobot_'.$h['id_kriteria']];
   }
-  // exit()
+  exit("<script>location.href='analisa_hasil.php';</script>");
 }
 
 # menampilkan bobot
