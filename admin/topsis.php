@@ -227,7 +227,7 @@
     <tr>
     <?php  
     for ($n=1; $n<=$jml_kriteria; $n++) { 
-      echo "<th>y<sub>{$n}</sub><sup>+</sup></th>";
+      echo "<th>y<sub>{$n}</sub><sup>-</sup></th>";
     }
     ?>
     </tr>
