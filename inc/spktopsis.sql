@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 14 Nov 2016 pada 15.16
+-- Generation Time: 17 Nov 2016 pada 08.37
 -- Versi Server: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -85,7 +85,8 @@ CREATE TABLE `tbl_guru` (
 
 INSERT INTO `tbl_guru` (`id_guru`, `nuptk`, `nama_guru`, `jenkel`, `tmp_lahir`, `tgl_lahir`, `jabatan`) VALUES
 (1, '2134353211', 'Anggi', 'P', 'Bandung', '1991-10-14', 'Guru IPA'),
-(2, '21389487', 'Deni Setiawan', 'L', 'Bintaro', '2016-11-09', 'Kepala Sekolah');
+(2, '21389487', 'Deni Setiawan', 'L', 'Bintaro', '2016-11-09', 'Kepala Sekolah'),
+(3, '13213', 'Maratus', 'P', 'Pamulang', '1993-11-09', 'Guru B Ing');
 
 -- --------------------------------------------------------
 
@@ -110,7 +111,20 @@ INSERT INTO `tbl_himpunan` (`id_himpunan`, `id_kriteria`, `nama`, `nilai`) VALUE
 (4, 3, 'S1', 8),
 (5, 3, 'S2', 9),
 (6, 3, 'S3', 10),
-(7, 2, '2001-2015', 10);
+(7, 2, '2001-2015', 9.5),
+(8, 2, '2001-2010', 8),
+(9, 2, '2001-2009', 7),
+(10, 2, '2001-2007', 6),
+(11, 2, '2001-2005', 5),
+(12, 1, '> 29hari', 9),
+(13, 1, '25 -28', 8),
+(14, 1, '20 - 25', 7),
+(15, 4, 'Ceriteria4 a', 9),
+(16, 4, 'Criter 4 2', 6),
+(17, 4, 'Criter 4 3', 5),
+(18, 5, 'C5 1', 6),
+(19, 5, 'C5 2', 7),
+(20, 5, 'C5 3', 8);
 
 -- --------------------------------------------------------
 
@@ -128,10 +142,21 @@ CREATE TABLE `tbl_klasifikasi` (
 --
 
 INSERT INTO `tbl_klasifikasi` (`id_guru`, `id_himpunan`) VALUES
-(1, 7),
-(1, 4),
+(2, 13),
 (2, 7),
-(2, 5);
+(2, 5),
+(2, 16),
+(2, 19),
+(3, 13),
+(3, 8),
+(3, 6),
+(3, 16),
+(3, 18),
+(1, 12),
+(1, 8),
+(1, 4),
+(1, 16),
+(1, 19);
 
 -- --------------------------------------------------------
 
@@ -142,17 +167,20 @@ INSERT INTO `tbl_klasifikasi` (`id_guru`, `id_himpunan`) VALUES
 CREATE TABLE `tbl_kriteria` (
   `id_kriteria` int(10) NOT NULL,
   `nama_kriteria` varchar(50) NOT NULL,
-  `atribut` enum('benefit','cost') NOT NULL
+  `atribut` enum('benefit','cost') NOT NULL,
+  `bobot_kriteria` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `tbl_kriteria`
 --
 
-INSERT INTO `tbl_kriteria` (`id_kriteria`, `nama_kriteria`, `atribut`) VALUES
-(1, 'Absensi', 'cost'),
-(2, 'Masa Kerja', 'benefit'),
-(3, 'Pendidikan', 'benefit');
+INSERT INTO `tbl_kriteria` (`id_kriteria`, `nama_kriteria`, `atribut`, `bobot_kriteria`) VALUES
+(1, 'Absensi', 'benefit', 2),
+(2, 'Masa Kerja', 'benefit', 3),
+(3, 'Pendidikan', 'benefit', 4),
+(4, 'Ceriteria 4', 'benefit', 5),
+(5, 'Criteria 5', 'benefit', 3);
 
 -- --------------------------------------------------------
 
@@ -232,17 +260,17 @@ ALTER TABLE `tbl_bobot`
 -- AUTO_INCREMENT for table `tbl_guru`
 --
 ALTER TABLE `tbl_guru`
-  MODIFY `id_guru` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_guru` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbl_himpunan`
 --
 ALTER TABLE `tbl_himpunan`
-  MODIFY `id_himpunan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_himpunan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `tbl_kriteria`
 --
 ALTER TABLE `tbl_kriteria`
-  MODIFY `id_kriteria` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_kriteria` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tbl_user`
 --
